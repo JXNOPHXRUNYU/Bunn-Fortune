@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ช่องทางการโอนเงิน — Bunné Fortune</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <div class="page-hero container">
+      <h1>ช่องทางการโอนเงิน</h1>
+      <p>โอนแล้วแจ้งสลิปในไลน์เพื่อยืนยันการจองคิวนะคะ</p>
+    </div>
+
+    <section>
+      <div class="container pay-wrap">
+
+        <!-- ===== การ์ดคิวอาร์ (พลิกได้) ===== -->
+        <div class="card pay-card reveal">
+          <div class="qr-flip" id="qrFlip">
+            <span class="qr-ear l" aria-hidden="true"></span>
+            <span class="qr-ear r" aria-hidden="true"></span>
+            <span class="qr-bow" aria-hidden="true"><i></i><i></i><b></b></span>
+            <div class="payqr-frame">
+              <div class="qr-inner">
+                <div class="qr-face qr-front" id="qrFront">
+                  <img src="images/pay-poster.webp" width="900" height="900" alt="โปสเตอร์ช่องทางการโอนเงิน Bunné Fortune มี QR Code พร้อมชื่อบัญชี วิมพ์วิภา ศ. และเบอร์พร้อมเพย์ทรูมันนี่">
+                </div>
+                <div class="qr-face qr-back" id="qrBack" aria-hidden="true">
+                  <canvas id="qrCanvas" width="600" height="600" role="img" aria-label="คิวอาร์โค้ดล็อกยอด"></canvas>
+                  <div class="qr-empty" id="qrEmpty">กรอกยอดด้านล่าง<br>เพื่อสร้างคิวอาร์ล็อกยอด ✨</div>
+                  <div class="qr-caption" id="qrCaption"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn ghost" id="flipBtn" type="button" aria-pressed="false">🔄 พลิกไปคิวอาร์ล็อกยอด</button>
+
+          <label class="pay-label" for="amount">ระบุยอดที่จะโอน · ได้คิวอาร์ล็อกยอดด้านหลังการ์ด</label>
+          <div class="amount-pill">
+            <span aria-hidden="true">฿</span>
+            <input id="amount" type="text" inputmode="decimal" placeholder="0.00" autocomplete="off" aria-describedby="amtMsg">
+          </div>
+          <div class="chips" aria-label="เลือกยอดตามแพ็คเกจ">
+            <button type="button" data-amt="89">89</button>
+            <button type="button" data-amt="99">99</button>
+            <button type="button" data-amt="259">259</button>
+            <button type="button" data-amt="399">399</button>
+          </div>
+          <p class="pay-msg" id="amtMsg" role="status" aria-live="polite"></p>
+
+          <button class="btn" id="saveBtn" type="button">⬇️ บันทึกคิวอาร์โค้ด</button>
+        </div>
+
+        <!-- ===== น้องกระต่ายพูด ===== -->
+        <div class="pay-say reveal">
+          <img src="images/avatar.webp" width="320" height="320" alt="ภาพวาดแม่หมอถือไพ่" loading="lazy">
+          <div class="bubble">โอนแล้วอย่าลืมแจ้งสลิปในไลน์<br>เพื่อยืนยันการจองคิวนะคะ 💜
+            <a class="btn line js-line" href="#" style="margin-top:10px;font-size:.95rem;padding:8px 20px">💬 แจ้งสลิปทาง LINE</a>
+          </div>
+        </div>
+
+        <!-- ===== บัญชีธนาคาร / วอลเล็ต ===== -->
+        <div class="acct-list">
+          <article class="acct reveal">
+            <div class="acct-ic" aria-hidden="true">🏦</div>
+            <div class="acct-body">
+              <small>ธนาคารกสิกรไทย</small>
+              <b class="acct-no">142-8-12530-0</b>
+              <span>ชื่อบัญชี: วิมพ์วิภา ศ. (Vimvipa S.)</span>
+            </div>
+            <button class="copy-btn" type="button" data-copy="1428125300" data-what="เลขบัญชีกสิกรไทย" aria-label="คัดลอกเลขบัญชีกสิกรไทย">⧉</button>
+          </article>
+
+          <article class="acct reveal">
+            <div class="acct-ic" aria-hidden="true">👛</div>
+            <div class="acct-body">
+              <small>พร้อมเพย์ / ทรูมันนี่</small>
+              <b class="acct-no">063-623-8166</b>
+              <span>ชื่อบัญชี: วิมพ์วิภา ศ. (Vimvipa S.)</span>
+            </div>
+            <button class="copy-btn" type="button" data-copy="0636238166" data-what="เบอร์พร้อมเพย์ / ทรูมันนี่" aria-label="คัดลอกเบอร์พร้อมเพย์ทรูมันนี่">⧉</button>
+          </article>
+
+          <article class="acct reveal">
+            <div class="acct-ic" aria-hidden="true">📝</div>
+            <div class="acct-body">
+              <small>โน๊ตใส่ในสลิป / บันทึกช่วยจำตอนโอน</small>
+              <b class="acct-note">จองคิว Bunné Fortune</b>
+            </div>
+            <button class="copy-btn" type="button" data-copy="จองคิว Bunné Fortune" data-what="ข้อความโน๊ต" aria-label="คัดลอกข้อความโน๊ต">⧉</button>
+          </article>
+        </div>
+
+        <div class="center-row reveal" style="margin-top:30px">
+          <a class="btn ghost" href="booking.html">🎐 ดูวิธีจองคิว</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer id="site-footer"></footer>
+  <script src="qr.js"></script>
+  <script src="script.js"></script>
+  <script src="payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แพ็คเกจทั้งหมด — Bunné Fortune</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <div class="page-hero container">
+      <h1>🔮 แพ็คเกจทั้งหมด</h1>
+      <p>รายละเอียดแพ็คเกจและราคาทั้งหมด อยู่ที่เว็บไซต์ของร้านค่ะ</p>
+    </div>
+
+    <section style="padding-top:30px">
+      <div class="container">
+        <!-- ลิงก์ไปเว็บแพ็คเกจ (ตั้งค่าใน script.js → LINKS.packages) -->
+        <div class="card big-link reveal">
+          <div class="big-emoji">🔮</div>
+          <h2>ดูแพ็คเกจทั้งหมดที่เว็บไซต์ร้าน</h2>
+          <p>เลือกแพ็คเกจที่สนใจ แล้วกลับมาจองคิวผ่าน LINE ได้เลยนะคะ</p>
+          <a class="btn js-packages" href="#">✨ เปิดดูแพ็คเกจทั้งหมด</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== โปสเตอร์แพ็คเกจ ===== -->
+    <section>
+      <div class="container">
+        <div class="sec-title reveal">
+          <h2>🖼️ โปสเตอร์แพ็คเกจ</h2>
+          <div class="en-sub">แตะที่รูปเพื่อขยายดูรายละเอียด</div>
+          <span class="squiggle"></span>
+        </div>
+        <div class="poster-grid">
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-sweet-spark-thumb.webp" data-full="images/poster-sweet-spark.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Sweet Spark แพ็คความรัก 89฿" loading="lazy">
+            <figcaption><b>Sweet Spark</b><span>แพ็คความรัก 89฿</span></figcaption>
+          </figure>
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-whisper-thumb.webp" data-full="images/poster-whisper.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Whisper Cards ภาพรวม 3 เดือน 89฿" loading="lazy">
+            <figcaption><b>Whisper Cards</b><span>ภาพรวม 3 เดือน 89฿</span></figcaption>
+          </figure>
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-wallpaper-thumb.webp" data-full="images/poster-wallpaper.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Wallpaper Mutelu เริ่ม 99฿" loading="lazy">
+            <figcaption><b>Wallpaper Mutelu</b><span>เริ่ม 99฿</span></figcaption>
+          </figure>
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-rising-star-thumb.webp" data-full="images/poster-rising-star.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Rising Star แพ็คการเรียน 89฿" loading="lazy">
+            <figcaption><b>Rising Star</b><span>แพ็คการเรียน 89฿</span></figcaption>
+          </figure>
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-future-track-thumb.webp" data-full="images/poster-future-track.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Future Track แพ็คการงาน 89฿" loading="lazy">
+            <figcaption><b>Future Track</b><span>แพ็คการงาน 89฿</span></figcaption>
+          </figure>
+          <figure class="poster-item zoomable reveal">
+            <img src="images/poster-card-message-thumb.webp" data-full="images/poster-card-message.webp" width="540" height="675" alt="โปสเตอร์แพ็คเกจ Card Message เริ่ม 89฿" loading="lazy">
+            <figcaption><b>Card Message</b><span>เริ่ม 89฿</span></figcaption>
+          </figure>
+        </div>
+        <div class="center-row" style="margin-top:28px">
+          <a class="btn js-line" href="#">💬 จองผ่าน LINE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Fast Pass (รูปจากร้าน) ===== -->
+    <section>
+      <div class="container">
+        <div class="sec-title reveal">
+          <h2>⚡ Fast Pass</h2>
+          <div class="en-sub">บริการด่วนทันใจ สำหรับคนไม่อยากรอนาน</div>
+          <span class="squiggle"></span>
+        </div>
+        <div class="info-img zoomable reveal">
+          <img src="images/fast-pass.png" alt="Fast Pass: คิวเร่ง ภายใน 3 ชั่วโมง บวกเพิ่ม 80 บาท / ด่วนจี๋ทันใจ ภายใน 1 ชั่วโมง บวกเพิ่ม 100 บาท" loading="lazy">
+        </div>
+        <p class="img-caption">แตะที่รูปเพื่อขยายดู · บริการนี้สอบถามก่อนจองทุกครั้งนะคะ</p>
+        <div class="center-row" style="margin-top:24px">
+          <a class="btn js-line" href="#">💬 สอบถามคิวด่วนทาง LINE</a>
+          <a class="btn ghost" href="index.html#decks">🃏 ไม่รู้จะเลือกไพ่สำรับไหน?</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>
